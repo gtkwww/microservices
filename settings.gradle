@@ -1,0 +1,5 @@
+rootProject.name = 'microservices'
+
+include('accounts-command-side-backend')
+include('accounts-command-side-service')
+include('accounts-command-side-web')
