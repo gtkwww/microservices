@@ -1,5 +1,9 @@
 rootProject.name = 'microservices'
 
+include 'common'
+
 include('accounts-command-side-backend')
 include('accounts-command-side-service')
 include('accounts-command-side-web')
+
+
