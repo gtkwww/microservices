@@ -12,3 +12,4 @@ build*.log
 classes
 target
 out
+libs

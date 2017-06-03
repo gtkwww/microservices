@@ -1,6 +1,0 @@
-dependencies {
-    compile project(":common")
-    compile project(":common-backend")
-
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-}
