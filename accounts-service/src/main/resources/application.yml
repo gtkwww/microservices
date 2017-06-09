@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/microservices-views
+    url: jdbc:mysql://127.0.0.1:3306/microservices
     username: root
     password: 999888
     driver-class-name: com.mysql.jdbc.Driver

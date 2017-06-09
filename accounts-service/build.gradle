@@ -2,10 +2,17 @@ dependencies {
 
     compile project(":common-backend")
 
-    compileOnly("org.projectlombok:lombok:1.16.16")
+    compileOnly("org.projectlombok:lombok:$lombokVersion")
 
-    compile('org.springframework:spring-context:4.3.8.RELEASE')
+    compile("mysql:mysql-connector-java:$mysqlConnectorVersion")
 
-    compile files('../libs/kero-eventuate-client.jar')
+    compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    compile("org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion")
+
+    compile files('../libs/kero-eventuate-client-common-impl.jar')
+    compile files('../libs/kero-eventuate-client-spring-common.jar')
+    compile files('../libs/kero-eventuate-client-jdbc-common.jar')
+    compile files('../libs/kero-eventuate-local-jdbc.jar')
+    compile files('../libs/kero-eventuate-local-jdbc-autoconfigure.jar')
 
 }

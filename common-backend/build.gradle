@@ -1,7 +1,7 @@
 dependencies {
     compile project(":common")
 
-    compileOnly("org.projectlombok:lombok:1.16.16")
+    compileOnly("org.projectlombok:lombok:$lombokVersion")
 
     compile files('../libs/kero-eventuate-client.jar')
 

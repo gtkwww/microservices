@@ -18,8 +18,8 @@ public class AccountViewController {
     @Autowired
     private AccountQueryService accountQueryService;
 
-    @RequestMapping(value = "/{accountId}", method = RequestMethod.GET)
-    public ResponseEntity<GetAccountResponse> get(@PathVariable String accountId) {
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<GetAccountResponse> get(@PathVariable("id") String accountId) {
         AccountInfo accountInfo = accountQueryService.findByAccountId(accountId);
 
         GetAccountResponse getAccountResponse = GetAccountResponse.builder()

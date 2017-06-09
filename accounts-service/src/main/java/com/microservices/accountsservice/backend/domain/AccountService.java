@@ -1,8 +1,7 @@
-package com.microservices.accountsservice.backend;
+package com.microservices.accountsservice.backend.domain;
 
 import com.microservices.accountsservice.backend.command.AccountCommand;
 import com.microservices.accountsservice.backend.command.CreateAccountCommand;
-import com.microservices.accountsservice.backend.domain.AccountAggregate;
 import com.microservices.common.account.AccountInfo;
 import io.kero.eventuate.AggregateRepository;
 import io.kero.eventuate.EntityWithIdAndVersion;
@@ -12,16 +11,15 @@ import java.util.concurrent.CompletableFuture;
 /**
  * Created by gtkwww on 2017/5/23.
  */
-public class AccountServiceImpl implements AccountService {
+public class AccountService {
 
     private final AggregateRepository<AccountAggregate, AccountCommand> accountRepository;
 
-    public AccountServiceImpl(AggregateRepository<AccountAggregate, AccountCommand> accountRepository) {
+    public AccountService(AggregateRepository<AccountAggregate, AccountCommand> accountRepository) {
         this.accountRepository = accountRepository;
     }
 
-    @Override
-    public CompletableFuture<EntityWithIdAndVersion<AccountAggregate>> createCustomer(AccountInfo accountInfo) {
+    public CompletableFuture<EntityWithIdAndVersion<AccountAggregate>> createAccount(AccountInfo accountInfo) {
         return accountRepository.save(new CreateAccountCommand(accountInfo));
     }
 }

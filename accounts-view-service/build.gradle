@@ -2,9 +2,9 @@ dependencies {
 
     compile project(":common")
 
-    compileOnly("org.projectlombok:lombok:1.16.16")
+    compileOnly("org.projectlombok:lombok:$lombokVersion")
 
-    compile("mysql:mysql-connector-java:5.1.41")
+    compile("mysql:mysql-connector-java:$mysqlConnectorVersion")
 
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
     compile("org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion")
