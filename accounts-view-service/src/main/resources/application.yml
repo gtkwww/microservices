@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   datasource:
@@ -7,3 +7,6 @@ spring:
     username: root
     password: 999888
     driver-class-name: com.mysql.jdbc.Driver
+EVENTUATELOCAL:
+  KAFKA:
+    BOOTSTRAP_SERVERS: 127.0.0.1:9092

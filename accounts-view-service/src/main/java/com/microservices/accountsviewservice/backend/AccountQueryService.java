@@ -13,8 +13,8 @@ public class AccountQueryService {
         this.accountViewRepository = accountViewRepository;
     }
 
-    public AccountInfo findByAccountId(String accountId) {
-        AccountInfo accountInfo = accountViewRepository.findByAccountId(accountId);
+    public AccountInfo findById(String accountId) {
+        AccountInfo accountInfo = accountViewRepository.findById(accountId);
 
         if (accountInfo == null)
             throw new AccountNotFoundException(accountId);

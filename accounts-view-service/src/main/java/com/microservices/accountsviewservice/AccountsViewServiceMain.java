@@ -1,6 +1,7 @@
 package com.microservices.accountsviewservice;
 
 import com.microservices.accountsviewservice.web.AccountsViewWebConfiguration;
+import io.kero.eventuate.javaclient.driver.EventuateDriverConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +11,7 @@ import org.springframework.context.annotation.Import;
  * Created by gtkwww on 2017/5/30.
  */
 @Configuration
-@Import({ AccountsViewWebConfiguration.class })
+@Import({ AccountsViewWebConfiguration.class, EventuateDriverConfiguration.class })
 @EnableAutoConfiguration
 public class AccountsViewServiceMain {
 

@@ -20,7 +20,7 @@ public class AccountViewController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<GetAccountResponse> get(@PathVariable("id") String accountId) {
-        AccountInfo accountInfo = accountQueryService.findByAccountId(accountId);
+        AccountInfo accountInfo = accountQueryService.findById(accountId);
 
         GetAccountResponse getAccountResponse = GetAccountResponse.builder()
                 .id(accountInfo.getId())

@@ -3,16 +3,30 @@ dependencies {
     compile project(":common-backend")
 
     compileOnly("org.projectlombok:lombok:$lombokVersion")
+    compile('com.alibaba:fastjson:1.2.31')
 
     compile("mysql:mysql-connector-java:$mysqlConnectorVersion")
 
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    compile("org.springframework.boot:spring-boot-starter-actuator:$springBootVersion")
     compile("org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion")
 
+    compile('org.apache.kafka:kafka-clients:0.10.0.1')
+    compile("org.apache.curator:curator-recipes:2.11.0")
+    compile("com.github.shyiko:mysql-binlog-connector-java:0.13.0")
+
+    compile files('../libs/kero-core.jar')
+    compile files('../libs/kero-eventuate-client.jar')
     compile files('../libs/kero-eventuate-client-common-impl.jar')
+    compile files('../libs/kero-eventuate-client-event-handling.jar')
+    compile files('../libs/kero-eventuate-client-spring.jar')
     compile files('../libs/kero-eventuate-client-spring-common.jar')
     compile files('../libs/kero-eventuate-client-jdbc-common.jar')
+    compile files('../libs/kero-eventuate-local-common.jar')
     compile files('../libs/kero-eventuate-local-jdbc.jar')
     compile files('../libs/kero-eventuate-local-jdbc-autoconfigure.jar')
+    compile files('../libs/kero-eventuate-local-kafka.jar')
+    compile files('../libs/kero-eventuate-local-cdc-mysql-autoconfigure.jar')
+    compile files('../libs/kero-eventuate-local-cdc-mysql-connector.jar')
 
 }

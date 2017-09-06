@@ -7,3 +7,12 @@ spring:
     username: root
     password: 999888
     driver-class-name: com.mysql.jdbc.Driver
+
+EVENTUATELOCAL:
+  KAFKA:
+    BOOTSTRAP_SERVERS: 127.0.0.1:9092
+  ZOOKEEPER:
+    CONNECTION_STRING: 127.0.0.1:2181
+  CDC:
+    DB_USER_NAME: root
+    DB_PASSWORD: 999888

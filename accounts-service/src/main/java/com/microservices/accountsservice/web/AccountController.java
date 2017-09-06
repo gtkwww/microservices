@@ -21,7 +21,6 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-
     //@RequestMapping(method = RequestMethod.POST)
     //public CompletableFuture<CreateAccountResponse> createAccount(@Validated @RequestBody CreateAccountRequest createAccountRequest) {
     @RequestMapping(method = RequestMethod.GET)

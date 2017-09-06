@@ -5,12 +5,15 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.util.CollectionUtils;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.List;
 
 /**
  * Created by gtkwww on 2017/5/30.
  */
-public class AccountViewRepository  {
+public class AccountViewRepository {
 
     private JdbcTemplate jdbcTemplate;
 
@@ -27,8 +30,29 @@ public class AccountViewRepository  {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public AccountInfo findByAccountId(String accountId) {
+    public AccountInfo findById(String accountId) {
         List<AccountInfo> accounts = jdbcTemplate.query("SELECT * FROM accounts WHERE id = ?", ROW_MAPPER, accountId);
         return CollectionUtils.isEmpty(accounts) ? null : accounts.get(0);
     }
+
+    public void create(final AccountInfo info) {
+        final String sql = "INSERT INTO `accounts`" +
+                "(`user_name`," +
+                "`user_password`," +
+                "`email`," +
+                "`phone`)" +
+                "VALUES" +
+                "(?, ?, ?, ?)";
+
+        jdbcTemplate.update((Connection con) -> {
+            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, info.getUserName());
+            ps.setString(2, info.getUserPassword());
+            ps.setString(3, info.getEmail());
+            ps.setString(4, info.getPhone());
+            return ps;
+        });
+
+    }
+
 }
