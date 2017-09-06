@@ -1,4 +1,4 @@
-package com.microservices.accountsviewservice.web;
+package com.microservices.accountscommon;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,23 +1,25 @@
 package com.microservices.common.account;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 import java.util.Date;
 
 /**
  * Created by gtkwww on 2017/5/23.
  */
+@Setter
 @Getter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class AccountInfo {
 
-    private final Integer id;
-    private final String userName;
-    private final String userPassword;
-    private final String email;
-    private final String phone;
-    private final Date loginTime;
+    private Integer id;
+    private String userName;
+    private String userPassword;
+    private String email;
+    private String phone;
+    private Date loginTime;
+
+
 }

@@ -1,4 +1,4 @@
-package com.microservices.accountsservice.web;
+package com.microservices.accountscommon;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,10 +1,10 @@
 package com.microservices.accountsservice.web;
 
+import com.microservices.accountscommon.CreateAccountRequest;
+import com.microservices.accountscommon.CreateAccountResponse;
 import com.microservices.accountsservice.backend.domain.AccountService;
 import com.microservices.common.account.AccountInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
