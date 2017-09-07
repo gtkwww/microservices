@@ -1,6 +1,7 @@
 dependencies {
 
     compile project(":common")
+    compile project(":accounts-common")
     compile project(":common-backend")
 
     compileOnly("org.projectlombok:lombok:$lombokVersion")

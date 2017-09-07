@@ -1,5 +1,6 @@
 package com.microservices.accountsviewservice.web;
 
+import com.microservices.accountscommon.GetAccountResponse;
 import com.microservices.accountsviewservice.backend.AccountNotFoundException;
 import com.microservices.accountsviewservice.backend.AccountQueryService;
 import com.microservices.common.account.AccountInfo;
