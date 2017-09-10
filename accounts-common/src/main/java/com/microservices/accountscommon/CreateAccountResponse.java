@@ -12,6 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class CreateAccountResponse {
 
-    private String accountId;
+    private final String accountId;
 
 }
