@@ -5,6 +5,8 @@ import com.microservices.accountscommon.CreateAccountResponse;
 import com.microservices.accountsservice.backend.domain.AccountService;
 import com.microservices.common.account.AccountInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,10 +23,8 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    //@RequestMapping(method = RequestMethod.POST)
-    //public CompletableFuture<CreateAccountResponse> createAccount(@Validated @RequestBody CreateAccountRequest createAccountRequest) {
-    @RequestMapping(method = RequestMethod.GET)
-    public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest createAccountRequest) {
+    @RequestMapping(method = RequestMethod.POST)
+    public CompletableFuture<CreateAccountResponse> createAccount(@Validated @RequestBody CreateAccountRequest createAccountRequest) {
         AccountInfo accountInfo = AccountInfo.builder()
                 .userName(createAccountRequest.getUserName())
                 .userPassword(createAccountRequest.getUserPassword())
