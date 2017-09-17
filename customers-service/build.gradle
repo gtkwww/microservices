@@ -1,0 +1,18 @@
+dependencies {
+
+    compile project(":common")
+
+    compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+
+    compile files('../libs/kero-core.jar')
+    compile files('../libs/kero-eventuate-client.jar')
+    compile files('../libs/kero-eventuate-client-common-impl.jar')
+    compile files('../libs/kero-eventuate-client-event-handling.jar')
+    compile files('../libs/kero-eventuate-client-spring.jar')
+    compile files('../libs/kero-eventuate-client-spring-common.jar')
+    compile files('../libs/kero-eventuate-client-jdbc-common.jar')
+    compile files('../libs/kero-eventuate-local-common.jar')
+    compile files('../libs/kero-eventuate-local-jdbc.jar')
+    compile files('../libs/kero-eventuate-local-jdbc-autoconfigure.jar')
+
+}
