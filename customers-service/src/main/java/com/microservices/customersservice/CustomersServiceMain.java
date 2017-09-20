@@ -1,4 +1,4 @@
-package com.microservices.accountsservice;
+package com.microservices.customersservice;
 
 import io.kero.eventuate.javaclient.driver.EventuateDriverConfiguration;
 import org.springframework.boot.SpringApplication;

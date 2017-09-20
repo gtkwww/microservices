@@ -1,6 +1,6 @@
-package com.microservices.accountsservice.web;
+package com.microservices.customersservice.web;
 
-import com.microservices.accountsservice.backend.domain.CustomerService;
+import com.microservices.customersservice.backend.domain.CustomerService;
 import com.microservices.common.customer.ToAccountInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;

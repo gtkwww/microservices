@@ -1,8 +1,8 @@
-package com.microservices.accountsservice.backend;
+package com.microservices.customersservice.backend;
 
-import com.microservices.accountsservice.backend.command.CustomerCommand;
-import com.microservices.accountsservice.backend.domain.CustomerAggregate;
-import com.microservices.accountsservice.backend.domain.CustomerService;
+import com.microservices.customersservice.backend.command.CustomerCommand;
+import com.microservices.customersservice.backend.domain.CustomerAggregate;
+import com.microservices.customersservice.backend.domain.CustomerService;
 import io.kero.eventuate.AggregateRepository;
 import io.kero.eventuate.EventuateAggregateStore;
 import org.springframework.context.annotation.Bean;

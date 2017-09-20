@@ -1,4 +1,4 @@
-package com.microservices.accountsservice.backend.command;
+package com.microservices.customersservice.backend.command;
 
 public class CreateCustomerCommand implements CustomerCommand {
 }

@@ -1,4 +1,4 @@
-package com.microservices.accountsservice.backend.command;
+package com.microservices.customersservice.backend.command;
 
 import io.kero.eventuate.Command;
 
